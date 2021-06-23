@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationsTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWA-8c-RKn">
+                                <rect key="frame" x="41.5" y="77" width="331" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0E-HK-VZ6">
+                                <rect key="frame" x="41.5" y="131" width="331" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Fr6-EN-NKW">
+                                <rect key="frame" x="41.5" y="173" width="331" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIE-fP-HN4">
+                                <rect key="frame" x="156" y="433" width="102" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Schedule"/>
+                                <connections>
+                                    <action selector="scheduleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iF8-VA-ebx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fr6-EN-NKW" firstAttribute="width" secondItem="w0E-HK-VZ6" secondAttribute="width" id="0ko-Js-kFZ"/>
+                            <constraint firstItem="w0E-HK-VZ6" firstAttribute="centerX" secondItem="HWA-8c-RKn" secondAttribute="centerX" id="5a6-3j-wrm"/>
+                            <constraint firstItem="w0E-HK-VZ6" firstAttribute="top" secondItem="HWA-8c-RKn" secondAttribute="bottom" constant="20" id="CAX-No-WLm"/>
+                            <constraint firstItem="Fr6-EN-NKW" firstAttribute="top" secondItem="w0E-HK-VZ6" secondAttribute="bottom" constant="8" symbolic="YES" id="Kuc-6A-4LU"/>
+                            <constraint firstItem="rIE-fP-HN4" firstAttribute="centerX" secondItem="Fr6-EN-NKW" secondAttribute="centerX" id="TGK-3g-vTg"/>
+                            <constraint firstItem="Fr6-EN-NKW" firstAttribute="centerX" secondItem="w0E-HK-VZ6" secondAttribute="centerX" id="VBS-Ts-Kmf"/>
+                            <constraint firstItem="HWA-8c-RKn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="VUU-Cx-09S"/>
+                            <constraint firstItem="HWA-8c-RKn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eHh-jD-QUC"/>
+                            <constraint firstItem="HWA-8c-RKn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="hJC-29-re4"/>
+                            <constraint firstItem="rIE-fP-HN4" firstAttribute="top" secondItem="Fr6-EN-NKW" secondAttribute="bottom" constant="44" id="kRN-05-dyJ"/>
+                            <constraint firstItem="w0E-HK-VZ6" firstAttribute="width" secondItem="HWA-8c-RKn" secondAttribute="width" id="uOj-04-8X2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Fr6-EN-NKW" id="kWo-kq-dcg"/>
+                        <outlet property="messageTF" destination="w0E-HK-VZ6" id="FwU-g8-pOh"/>
+                        <outlet property="titleTF" destination="HWA-8c-RKn" id="mua-YQ-ZCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
